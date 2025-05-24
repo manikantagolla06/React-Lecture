@@ -7,7 +7,8 @@ export default function App1() {
   return (
     <>
       <h1>This is App1 Component</h1>
-      <Product name="Laptop" price={45000} />
+      <h2>Components and Props</h2>
+      <Product name="Console" price={55000} />
       <Variant />
       <Calc v1={a} v2={b} />
     </>
