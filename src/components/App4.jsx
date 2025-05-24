@@ -1,7 +1,7 @@
 import React from "react";
 export default function App4() {
   const handleSubmit = () => {
-    alert("Hello World");
+    alert("Mern Stack");
   };
   const handleSubmit1 = (name) => {
     alert(name);
@@ -12,7 +12,7 @@ export default function App4() {
       <h2>Event Handling</h2>
       <p>
         <button onClick={handleSubmit}>Submit</button>
-        <button onClick={() => handleSubmit1("John")}>Submit1</button>
+        <button onClick={() => handleSubmit1("Arjun Sarkaar")}>Submit1</button>
       </p>
     </div>
   );
