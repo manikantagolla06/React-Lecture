@@ -2,7 +2,7 @@ import React from 'react';
 import Fruit from './Fruit';
 
 const App6 = () => {
-  const fruits = ['Apple', 'Mango', 'Orange', 'Banana'];
+  const fruits = ['Apple', 'Mango', 'Grapes', 'Dragon'];
 
   return (
     <div style={{ border: '2px solid black', margin: '40px auto', padding: '30px', maxWidth: '600px' }}>
