@@ -4,7 +4,7 @@ import "./Header.css";
 export default function Header() {
   return (
     <div className="App-Header-Row">
-      <h1 style={{ backgroundColor: "yellow", color: "blue" }}>
+      <h1 style={{ backgroundColor: "black", color: "orange" }}>
         React Lessons
       </h1>
       <Link to="/">App1</Link>-<Link to="/app2">App2</Link>-
