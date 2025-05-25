@@ -1,26 +1,18 @@
-import React from "react";
-import { useState } from "react";
-export default function App9() {
-  const [count, setCount] = useState(10);
-  const increment = () => {
-    //setCount(count + 1);
-    setCount((prevCount) => prevCount + 1);
-  };
-  const decrement = () => {
-    //setCount(count + 1);
-    setCount((prevCount) => prevCount - 1);
-  };
+// components/App9.jsx
+import React, { useState } from "react";
+
+function App9() {
+  const [count, setCount] = useState(10); 
+
   return (
     <div>
-      <h1>App8</h1>
-      <h2>useState Revision</h2>
-      <h3>{count}</h3>
-      <p>
-        <button onClick={decrement}>-</button>
-         <h3>{count}</h3>
-        <button onClick={decrement}>+</button>
-        
-      </p>
+      <h1>App9</h1>
+      <h2>Assignment</h2>
+      <p>{count}</p>
+      <button onClick={() => setCount(count + 1)}>+</button>
+      <button onClick={() => setCount(count - 1)}>-</button>
     </div>
   );
 }
+
+export default App9;
