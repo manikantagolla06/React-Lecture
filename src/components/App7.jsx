@@ -9,7 +9,7 @@ export default function App7() {
   return (
     <div>
       <h1>App7</h1>
-      <h2>useState with Arrays and Objects</h2>
+      //<h2>useState with Arrays and Objects</h2>
       <h3>Registration Form</h3>
       <p>
         <input

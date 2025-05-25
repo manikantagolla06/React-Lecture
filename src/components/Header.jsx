@@ -4,7 +4,7 @@ import "./Header.css";
 export default function Header() {
   return (
     <div className="App-Header-Row">
-      <h1 style={{ backgroundColor: "yellow", color: "blue" }}>
+      <h1 style={{ backgroundColor: "orange", color: "black" }}>
         React Lessons
       </h1>
       <Link to="/">App1</Link>-<Link to="/app2">App2</Link>-
@@ -13,6 +13,7 @@ export default function Header() {
       <Link to="/app5">App5</Link>-
       <Link to="/app6">App6</Link>-
       <Link to="/app7">App7</Link>
+         <Link to="/app8">App8</Link>
     </div>
   );
 }
