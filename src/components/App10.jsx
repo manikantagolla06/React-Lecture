@@ -1,67 +1,48 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 export default function App10() {
-  const products = [
+  const [products, setProducts] = useState([
     { id: 1, name: "Product 1", price: 23 },
     { id: 2, name: "Product 2", price: 30 },
-    { id: 3, name: "Product 3", price: 45 },
-  ];
-  const [cart, setCart] = useState({}); 
-
-  const handleAdd = (id) => {
-    setCart((prevCart) => ({
-      ...prevCart,
-      [id]: (prevCart[id] || 0) + 1,
-    }));
+    { id: 3, name: "Product 3", price: 35 },
+  ]);
+  const [cart, setCart] = useState({});
+  const addToCart = (id) => {
+    !cart[id] && setCart({ ...cart, [id]: 1 });
   };
   const increment = (id) => {
-    setCart((prevCart) => ({
-      ...prevCart,
-      [id]: prevCart[id] + 1,
-    }));
+    setCart({ ...cart, [id]: cart[id] + 1 });
   };
   const decrement = (id) => {
-    setCart((prevCart) => {
-      const updated = { ...prevCart };
-      if (updated[id] > 1) {
-        updated[id] -= 1;
-      } else {
-        delete updated[id];
-      }
-      return updated;
-    });
+    setCart({ ...cart, [id]: cart[id] - 1 });
   };
-
   return (
     <div>
-      <h1>App10</h1>
-      <h2>Assignment with Cart as Object</h2>
-
+      <h1>App 10</h1>
+      <h2>Assignment</h2>
       <h3>Products</h3>
-      <ul>
-        {products.map((p) => (
-          <li key={p.id}>
-            {p.name} - ${p.price}{" "}
-            <button onClick={() => handleAdd(p.id)}>Add</button>
+      <ol>
+        {products.map((value) => (
+          <li key={value.id}>
+            {value.name}-{value.price}-
+            <button onClick={() => addToCart(value.id)}>Add</button>
           </li>
         ))}
-      </ul>
-
+      </ol>
       <hr />
       <h3>My Cart</h3>
-      <ol>
-        {Object.keys(cart).map((id) => {
-          const product = products.find((p) => p.id === parseInt(id));
-          return (
-            <li key={id}>
-              {product.name} - ${product.price}{" "}
-              <button onClick={() => decrement(product.id)}>-</button>{" "}
-              {cart[id]}{" "}
-              <button onClick={() => increment(product.id)}>+</button> - $
-              {product.price * cart[id]}
+      {products.map(
+        (value) =>
+          cart[value.id] && (
+            <li key={value.id}>
+              {value.name}-{value.price}-
+              <button onClick={() => decrement(value.id)}>-</button>
+              {cart[value.id]}-
+              <button onClick={() => increment(value.id)}>+</button>-
+              {value.price * cart[value.id]}
             </li>
-          );
-        })}
-      </ol>
+          )
+      )}
     </div>
   );
 }
