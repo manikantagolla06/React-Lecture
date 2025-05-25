@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-
 export default function App10() {
   const products = [
     { id: 1, name: "Product 1", price: 23 },
     { id: 2, name: "Product 2", price: 30 },
     { id: 3, name: "Product 3", price: 45 },
   ];
-
   const [cart, setCart] = useState({}); 
 
   const handleAdd = (id) => {
@@ -15,14 +13,12 @@ export default function App10() {
       [id]: (prevCart[id] || 0) + 1,
     }));
   };
-
   const increment = (id) => {
     setCart((prevCart) => ({
       ...prevCart,
       [id]: prevCart[id] + 1,
     }));
   };
-
   const decrement = (id) => {
     setCart((prevCart) => {
       const updated = { ...prevCart };
