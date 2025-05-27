@@ -16,7 +16,7 @@ function App19()
         {
             const x=wicket+1;
             setWicket(x);
-            if(x==11)
+            if(x==10)
             {
                 setMessage("Game over");
             }
