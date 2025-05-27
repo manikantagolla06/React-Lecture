@@ -8,7 +8,7 @@ function App19()
         if(wicket<11)
         {
             setRun(run+1);
-            setMessage("Well done boy!..");
+            setMessage("Well done man!!!..");
         }
     }
     const wickets=()=>{
