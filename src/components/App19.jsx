@@ -12,7 +12,7 @@ function App19()
         }
     }
     const wickets=()=>{
-        if(wicket<11)
+        if(wicket<10)
         {
             const x=wicket+1;
             setWicket(x);
